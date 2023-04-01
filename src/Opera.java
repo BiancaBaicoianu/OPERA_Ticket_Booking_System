@@ -89,6 +89,35 @@ public class Opera {
         }
         return null;
     }
+
+    public void showFutureSpectacles(){
+        if(futureSpectacles != null) {
+            if (futureSpectacles.size() == 0) {
+                System.out.println("Nu sunt spectacole\n");
+            } else {
+                for (Spectacle s : futureSpectacles) {
+                    System.out.println(s.getSpectacleId() + ": " + s);
+                }
+            }
+        }
+        else{
+            System.out.println("Nu sunt spectacole!");
+        }
+    }
+    public void showPastSpectacles(){
+        if(pastSpectacles != null) {
+            if (pastSpectacles.size() == 0) {
+                System.out.println("Nu sunt spectacole\n");
+            } else {
+                for (Spectacle s : pastSpectacles) {
+                    System.out.println(s.getSpectacleId() + ": " + s);
+                }
+            }
+        }
+        else{
+            System.out.println("Nu sunt spectacole!");
+        }
+    }
     //ADAUGARE HALL
     public void addHall(Hall hall){
         halls.add(hall);

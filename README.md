@@ -1,8 +1,8 @@
 # OPERA_Ticket_Booking_System
 Proiect PROGRAMARE AVANSATA PE OBIECTE - Anul II, Sem II
 
-##Etapa I 
-###1) Definirea sistemului:  
+## Etapa I 
+### 1) Definirea sistemului:  
 Să se creeze o lista pe baza temei alese cu cel puțin 10 acțiuni/interogări care se pot face în cadrul 
 sistemului și o lista cu cel puțin 8 tipuri de obiecte. 
 - Actiuni:
@@ -40,7 +40,7 @@ sistemului și o lista cu cel puțin 8 tipuri de obiecte.
   - AdminService
   - ClientService
 
-##2) Implementare 
+### 2) Implementare 
 Sa se implementeze în limbajul Java o aplicație pe baza celor definite la primul punct. 
 Aplicația va conține: 
 • clase simple cu atribute private / protected și metode de acces 

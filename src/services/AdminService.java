@@ -1,3 +1,8 @@
+package services;
+
+import models.*;
+
+import java.util.List;
 import java.util.Scanner;
 public class AdminService {
     public static AdminService admin;
@@ -5,10 +10,11 @@ public class AdminService {
     private String username;
     private String password;
 
-    private AdminService(){}
-
-    public String getUsername() {
-        return username;
+    public AdminService(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
+    public AdminService() {
     }
 
     public void setUsername(String username) {
@@ -29,6 +35,14 @@ public class AdminService {
 
     public void setId(int id) {
         this.id = id;
+    }
+    // verifica daca adminul cu user si parola exista in lista mea de admini
+    public boolean checkAdmin(String username, String password, List<AdminService> admins){
+        for(AdminService admin : admins){
+            if(admin.username.equals(username) && admin.password.equals(password))
+                return true;
+        }
+        return false;
     }
 
     public static AdminService getAdmin(){
@@ -72,7 +86,7 @@ public class AdminService {
             System.out.println("Sală invalidă!");
         }
 
-        System.out.println("Concert/Balet/Musical? Pentru a ieși, scrie EXIT");
+        System.out.println("Concert/Balet/models.Musical? Pentru a ieși, scrie EXIT");
         Spectacle spectacle;
         while(true){
             String typeSpectacle = scanner.next();
@@ -179,8 +193,8 @@ public class AdminService {
         Opera opera = Opera.getOpera();
         scanner.nextLine();
 
-        System.out.print("Nume sala:");
-        String name = scanner.nextLine();
+        System.out.print("Id sala:");
+        int id = scanner.nextInt();
         System.out.print("Etaj:");
         int floor = scanner.nextInt();
         scanner.nextLine();
@@ -199,8 +213,9 @@ public class AdminService {
         int columns = scanner.nextInt();
         scanner.nextLine();
 
-        Hall hall = new Hall(name, floor, availability, rows, columns);
+        Hall hall = new Hall(id, floor, availability, rows, columns);
         opera.addHall(hall);
+        System.out.print("Sala a fost adăugată cu succes! ");
 
     }
     // STERGE SALA

@@ -1,3 +1,5 @@
+package models;
+
 import java.util.Objects;
 
 public class Hall {
@@ -11,8 +13,8 @@ public class Hall {
 
     public Hall() {
     }
-    public Hall(String name, int floor, boolean available, int rows, int columns) {
-        this.name = name;
+    public Hall(int id, int floor, boolean available, int rows, int columns) {
+        this.id = id;
         this.floor = floor;
         this.availability = available;
         this.rows = rows;
@@ -77,12 +79,12 @@ public class Hall {
     }
 
     public String toString(){
-        return "Hall " + name + "\n Floor " + floor;
+        return "models.Hall " + name + "\n Floor " + floor;
     }
 
     public void showInfos(){
         System.out.println("Id: " + id +
-                "\nHall: " + name +
+                "\nmodels.Hall: " + name +
                 "\nAvailability: " + availability +
                 "\n Seats number: " + seatsNo +
                 "\n Floor: " + floor + "\n");

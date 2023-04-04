@@ -1,13 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="23b8627f-bdfd-4e76-a7b5-d3d80432eaa8" name="Changes" comment="Obiecte">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AdminService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ClientService.java" afterDir="false" />
+    <list default="true" id="23b8627f-bdfd-4e76-a7b5-d3d80432eaa8" name="Changes" comment="Services">
+      <change afterPath="$PROJECT_DIR$/src/models/Admin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/OperaService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Admin.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Opera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Opera.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/AdminService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ballet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Ballet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BalletTicket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/BalletTicket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/ClientService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Concert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Concert.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ConcertTicket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/ConcertTicket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Hall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Hall.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Musical.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Musical.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MusicalTicket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/MusicalTicket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Opera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Opera.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Spectacle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Spectacle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Ticket.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,14 +52,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="OPERA Ticket Booking System" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -69,7 +97,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680370035628</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Services">
+      <created>1680380748453</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1680380748453</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -86,6 +121,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Test" />
     <MESSAGE value="Obiecte" />
-    <option name="LAST_COMMIT_MESSAGE" value="Obiecte" />
+    <MESSAGE value="Services" />
+    <option name="LAST_COMMIT_MESSAGE" value="Services" />
   </component>
 </project>

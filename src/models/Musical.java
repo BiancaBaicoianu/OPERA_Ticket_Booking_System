@@ -1,4 +1,6 @@
-public class Musical extends Spectacle{
+package models;
+
+public class Musical extends Spectacle {
     private int noActs;
 
     public Musical(int spectacleId, Hall hall, double minPrice, String nameSpectacle, String type, int day, int month, int year, String startingHour, String endingHour, int noActs) {

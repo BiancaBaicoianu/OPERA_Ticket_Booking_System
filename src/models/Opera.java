@@ -1,3 +1,5 @@
+package models;
+
 import java.util.*;
 
 public class Opera {
@@ -122,6 +124,7 @@ public class Opera {
     public void addHall(Hall hall){
         halls.add(hall);
     }
+
     //STERGERE HALL dupa ID
     public void deleteHall(int id){
         int index = -1;

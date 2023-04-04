@@ -1,4 +1,6 @@
-public class Ballet extends Spectacle{
+package models;
+
+public class Ballet extends Spectacle {
     private boolean logeSeat; //daca este loc la loja, va avea suprataxa
 
     public Ballet(int spectacleId, Hall hall, double minPrice, String nameSpectacle, String type, int day, int month, int year, String startingHour, String endingHour, boolean logeSeat) {

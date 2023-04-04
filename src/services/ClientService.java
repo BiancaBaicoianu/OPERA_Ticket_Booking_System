@@ -1,3 +1,9 @@
+package services;
+
+import models.Opera;
+import models.Spectacle;
+import models.Ticket;
+
 import java.util.*;
 
 public class ClientService {
@@ -8,15 +14,46 @@ public class ClientService {
     private Set<Spectacle> favorites;
     private List<Ticket> futureTickets;
 
-    private ClientService(){
+    public ClientService(){
         favorites = new TreeSet<>();
         futureTickets = new ArrayList<>();
     }
+
+    public ClientService(String user1, String password1) {
+        this.username = user1;
+        this.password = password1;
+    }
+
     public static ClientService getClientService(){
         if(clientService == null)
             clientService = new ClientService();
 
         return clientService;
+    }
+
+    // verifica daca clientul cu user si parola exista in lista mea de clienti
+    public boolean checkClient(String username, String password, List<ClientService> clients){
+        for(ClientService client : clients){
+            if(client.username.equals(username) && client.password.equals(password))
+                return true;
+        }
+        return false;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     // CUMPĂRĂ BILET

@@ -1,4 +1,6 @@
-public class Concert extends Spectacle{
+package models;
+
+public class Concert extends Spectacle {
     private boolean withSeat; // exista posibilitatea de a sta in picioare
 
     public Concert(int spectacleId, Hall hall, double minPrice, String nameSpectacle, String type, int day, int month, int year, String startingHour, String endingHour, boolean withSeat) {

@@ -1,3 +1,5 @@
+package models;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -6,7 +8,7 @@ public abstract class Spectacle implements Comparable<Spectacle>{
     protected Hall hall;
     protected double minPrice;
     protected String nameSpectacle;
-    protected String type; // aici pot sa am un enum {balet, musical, concert}
+    protected String type;
     protected List<List<Character>> availableSeats;
     protected int noAvailableSeats;
     protected int day;
@@ -164,7 +166,7 @@ public abstract class Spectacle implements Comparable<Spectacle>{
 
     @Override
     public String toString() {
-        return "Spectacle: " +
+        return "models.Spectacle: " +
                 nameSpectacle + " - " +
                 day + "/" +
                 month + "/" +

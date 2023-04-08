@@ -57,6 +57,7 @@ public class Opera {
         return name;
     }
 
+    // ARATA INFORMATII DESPRE OPERA
     public void showInfos(){
         System.out.println("Bine ați venit la " + name +
                 "\nAdresă: " + address +
@@ -91,7 +92,7 @@ public class Opera {
         }
         return null;
     }
-
+    //ARATA SPECTACOLELE VIITOARE
     public void showFutureSpectacles(){
         if(futureSpectacles != null) {
             if (futureSpectacles.size() == 0) {
@@ -106,6 +107,7 @@ public class Opera {
             System.out.println("Nu sunt spectacole!");
         }
     }
+    // ARATA SPECTACOLELE TRECUTE
     public void showPastSpectacles(){
         if(pastSpectacles != null) {
             if (pastSpectacles.size() == 0) {
@@ -122,6 +124,7 @@ public class Opera {
     }
     //ADAUGARE HALL
     public void addHall(Hall hall){
+
         halls.add(hall);
     }
 
@@ -137,6 +140,7 @@ public class Opera {
             halls.remove(index);
         }
     }
+    // VERIFICĂ DACĂ SALA ESTE DISPONIBILĂ
     public Hall[] hallsAvailable(int day, int month, int year){
         Set<Hall> hallsSet = new HashSet<>();
         for(Hall hall: halls){

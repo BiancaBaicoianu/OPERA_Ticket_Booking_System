@@ -4,24 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23b8627f-bdfd-4e76-a7b5-d3d80432eaa8" name="Changes" comment="Services">
-      <change afterPath="$PROJECT_DIR$/src/models/Admin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/OperaService.java" afterDir="false" />
+    <list default="true" id="23b8627f-bdfd-4e76-a7b5-d3d80432eaa8" name="Changes" comment="Main">
+      <change afterPath="$PROJECT_DIR$/src/services/IService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/impl/AdminService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/impl/ClientService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/AdminService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ballet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Ballet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BalletTicket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/BalletTicket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/ClientService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Concert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Concert.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ConcertTicket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/ConcertTicket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Hall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Hall.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Musical.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Musical.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MusicalTicket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/MusicalTicket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Opera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Opera.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Spectacle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Spectacle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Ticket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/BalletTicket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/BalletTicket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/ConcertTicket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/ConcertTicket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/MusicalTicket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/MusicalTicket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Opera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Opera.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Ticket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/AdminService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/ClientService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/OperaService.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +29,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -104,7 +103,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680380748453</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Main">
+      <created>1680645628972</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1680645628972</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -122,6 +128,18 @@
     <MESSAGE value="Test" />
     <MESSAGE value="Obiecte" />
     <MESSAGE value="Services" />
-    <option name="LAST_COMMIT_MESSAGE" value="Services" />
+    <MESSAGE value="Main" />
+    <option name="LAST_COMMIT_MESSAGE" value="Main" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/services/impl/ClientService.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

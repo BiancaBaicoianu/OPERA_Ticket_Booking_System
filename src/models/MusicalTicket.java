@@ -5,6 +5,6 @@ public class MusicalTicket extends Ticket {
         super(seat, price, spectacle);
     }
     public void print(){
-        //to be continue
+        System.out.println("Biletul pentru musical-ul " + spectacle.getNameSpectacle() + " la locul " + seat + " costa " + price + " lei.");
     }
 }

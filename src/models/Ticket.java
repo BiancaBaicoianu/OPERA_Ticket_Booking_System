@@ -1,6 +1,5 @@
 package models;
 
-import models.Spectacle;
 
 // clasa abstracta
 public abstract class Ticket {

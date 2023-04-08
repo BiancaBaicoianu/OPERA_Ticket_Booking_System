@@ -6,6 +6,6 @@ public class ConcertTicket extends Ticket {
     }
 
     public void print(){
-        // to be continue
+        System.out.println("Biletul pentru concertul " + spectacle.getNameSpectacle() + " la locul " + seat + " costa " + price + " lei.");
     }
 }

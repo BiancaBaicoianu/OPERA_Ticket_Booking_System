@@ -7,20 +7,25 @@ Să se creeze o lista pe baza temei alese cu cel puțin 10 acțiuni/interogări 
 sistemului și o lista cu cel puțin 8 tipuri de obiecte. 
 - Actiuni:
   - Client
-    - cumpara bilete
-    - verifica disponibilitatea locurilor din sala
-    - vede bilete cumparate pentru spectacole viitoare
-    - adauga spectacole la 'Favorite'
+    - vede descriere operă
+    - vede spectacole trecute
+    - vedet spectacole viitoare
     - vede lista de 'Favorite'
+    - vede bilete cumparate pentru spectacole viitoare
+    - caută spectacol după dată
+    - caută spectacol după id
+    - cumpara bilete
+    - adauga spectacole la 'Favorite'
     - sterge elemente din lista de 'Favorite'
     
-  - Administrator
+  - Admin
     - adauga sali de spectacol
     - sterge sali de spectacol
     - adauga spectacol
     - sterge spectacol
-    - vizioneaza spectacole viitoare
+    - verifică disponibilitate sală
     - vizioneaza spectacole trecute
+    - vizioneaza spectacole viitoare
 
   
   
@@ -41,7 +46,7 @@ sistemului și o lista cu cel puțin 8 tipuri de obiecte.
 - Services:
   - AdminService
   - ClientService
-  - OperaService
+
 
 ### 2) Implementare 
 Sa se implementeze în limbajul Java o aplicație pe baza celor definite la primul punct. 

@@ -68,20 +68,26 @@ public class Opera {
         System.out.println();
     }
     // ADAUGARE SPECTACOL
-    public void addSpectacle(Spectacle spectacle){
+    public boolean addSpectacle(Spectacle spectacle){
         if(spectacle != null){
             this.futureSpectacles.add(spectacle);
+            return true;
         }
+        return false;
     }
     // STERGERE SPECTACOL dupa ID
-    public void deleteSpectacle(int id){
+    public boolean deleteSpectacle(int id){
+        boolean found = false;
         if(futureSpectacles.size() != 0){
             for(int i = 0; i < futureSpectacles.size(); i++){
                 if(futureSpectacles.get(i).getSpectacleId() == id){
+                    found = true;
                     futureSpectacles.remove(i);
+                    break;
                 }
             }
         }
+        return found;
     }
     //GASESTE SPECTACOL VIITOR DUPA ID
     public Spectacle findFutureSpectacle(int id){

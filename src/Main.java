@@ -1,7 +1,12 @@
+import database.DatabaseConfiguration;
+import database.DatabaseManagement;
 import models.Admin;
+import models.Ballet;
 import models.Client;
+import models.Spectacle;
 import services.impl.AdminService;
 import services.impl.ClientService;
+import database.DatabaseConfiguration;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,6 +19,11 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
+
+//        DatabaseConfiguration databaseConfiguration = new DatabaseConfiguration();
+//        databaseConfiguration.connection();
+
+        DatabaseManagement dbManager = DatabaseManagement.getDatabaseManagement(); // cream baza de date
 
         // clienti cu acces
         List<Client> clientList;
@@ -29,6 +39,7 @@ public class Main {
 
         adminList.add(new Admin("admin1", "password1"));
         adminList.add(new Admin("admin2", "password2"));
+        adminList.add(new Admin("admin3", "password3"));
 
 
         // meniu interactiv in functie de rol(admin/client)

@@ -1,5 +1,8 @@
 package models;
 
+import repos.HallRepository;
+import repos.SpectacleRepository;
+
 import java.util.List;
 import java.util.Scanner;
 public class Admin {
@@ -150,6 +153,15 @@ public class Admin {
                 System.out.println("Opțiune invalidă");
             }
         }
+        boolean ok = opera.addSpectacle(spectacle);
+        if(!ok){
+            System.out.println("Spectacolul nu a putut fi adăugat!");
+        }
+        else{
+            SpectacleRepository.insertSpectacle(spectacle);
+            //AuditRepository.addToAudit("Spectacolul " + spectacleName + " a fost adăugat de către adminul " + this.username);
+            System.out.println("Spectacolul a fost adăugat cu succes!");
+        }
 
     }
     // STERGE UN SPECTACOL
@@ -171,6 +183,18 @@ public class Admin {
         System.out.print("Introdu id-ul pe care doriți să-l ștergeți:");
         int id = scanner.nextInt();
 
+        boolean ok = SpectacleRepository.findSpectacle(id);
+        if(!ok){
+            System.out.println("Nu există un spectacol cu acest id!");
+            return;
+        }
+        boolean bec = opera.deleteSpectacle(id);
+        if(bec){
+            SpectacleRepository.deleteSpectacleById(id);
+            //AuditRepository.addToAudit("Spectacolul cu id-ul " + id + " a fost șters");
+            System.out.println("Nu există un spectacol cu acest id!");
+            return;
+        }
         opera.deleteSpectacle(id);
 
     }
@@ -193,6 +217,8 @@ public class Admin {
 
         System.out.print("Id sala:");
         int id = scanner.nextInt();
+        System.out.print("Nume sala:");
+        String name = scanner.next();
         System.out.print("Etaj:");
         int floor = scanner.nextInt();
         scanner.nextLine();
@@ -211,9 +237,13 @@ public class Admin {
         int columns = scanner.nextInt();
         scanner.nextLine();
 
-        Hall hall = new Hall(id, floor, availability, rows, columns);
+        Hall hall = new Hall(id, name, floor, availability, rows, columns);
+//        HallRepository.addHall(hall);
+//        int id = DatabaseManagement.lastIdFromTable("hall");
+//        hall.setId(id);
         opera.addHall(hall);
-        System.out.print("Sala a fost adăugată cu succes! ");
+        //AuditRepository.addToAudit("Admin id: " + admin.getId() + " added hall id: " + id);
+        //System.out.print("Sala a fost adăugată cu succes! ");
 
     }
     // STERGE SALA
@@ -224,6 +254,8 @@ public class Admin {
         System.out.print("Id sala: ");
         int id = scanner.nextInt();
 
+        //HallRepository.deleteHall(id);
+        //AuditRepository.addToAudit("Admin id: " + admin.getId() + " deleted hall id: " + id);
         opera.deleteHall(id);
     }
 

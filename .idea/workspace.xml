@@ -5,21 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="23b8627f-bdfd-4e76-a7b5-d3d80432eaa8" name="Changes" comment="Main">
-      <change afterPath="$PROJECT_DIR$/src/services/IService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/impl/AdminService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/impl/ClientService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/postgresql_42_6_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/database/DatabaseConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/database/DatabaseManagement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/repos/AdminRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/repos/AuditRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/repos/ClientRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/repos/HallRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/repos/SpectacleRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/repos/TicketRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OPERA Ticket Booking System.iml" beforeDir="false" afterPath="$PROJECT_DIR$/OPERA Ticket Booking System.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/BalletTicket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/BalletTicket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/ConcertTicket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/ConcertTicket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/MusicalTicket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/MusicalTicket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Hall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Hall.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/Opera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Opera.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Ticket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/AdminService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/ClientService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/OperaService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Spectacle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Spectacle.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,14 +52,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/bbaic/Downloads/postgresql-42.6.0.jar",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -110,7 +119,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680645628972</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Main">
+      <created>1680982298321</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1680982298321</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -130,16 +146,5 @@
     <MESSAGE value="Services" />
     <MESSAGE value="Main" />
     <option name="LAST_COMMIT_MESSAGE" value="Main" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/services/impl/ClientService.java</url>
-          <line>36</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

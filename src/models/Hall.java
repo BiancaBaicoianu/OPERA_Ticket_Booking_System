@@ -13,8 +13,9 @@ public class Hall {
 
     public Hall() {
     }
-    public Hall(int id, int floor, boolean available, int rows, int columns) {
+    public Hall(int id, String name, int floor, boolean available, int rows, int columns) {
         this.id = id;
+        this.name = name;
         this.floor = floor;
         this.availability = available;
         this.rows = rows;
@@ -84,7 +85,7 @@ public class Hall {
 
     public void showInfos(){
         System.out.println("Id: " + id +
-                "\nmodels.Hall: " + name +
+                "\nHall: " + name +
                 "\nAvailability: " + availability +
                 "\n Seats number: " + seatsNo +
                 "\n Floor: " + floor + "\n");

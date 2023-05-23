@@ -9,6 +9,7 @@ public abstract class Spectacle implements Comparable<Spectacle>{
     protected double minPrice;
     protected String nameSpectacle;
     protected String type;
+    protected String description;
     protected List<List<Character>> availableSeats;
     protected int noAvailableSeats;
     protected int day;
@@ -73,6 +74,14 @@ public abstract class Spectacle implements Comparable<Spectacle>{
 
     public void setNameSpectacle(String nameSpectacle) {
         this.nameSpectacle = nameSpectacle;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     @Override
@@ -159,6 +168,7 @@ public abstract class Spectacle implements Comparable<Spectacle>{
     public void setType(String type) {
         this.type = type;
     }
+
 
     public List<List<Character>> getAvailableSeats() {
         return availableSeats;

@@ -1,5 +1,7 @@
 # OPERA_Ticket_Booking_System
 Proiect PROGRAMARE AVANSATA PE OBIECTE - Anul II, Sem II
+## Descriere aplicație
+
 
 ## Etapa I 
 ### 1) Definirea sistemului:  
@@ -7,6 +9,8 @@ Să se creeze o lista pe baza temei alese cu cel puțin 10 acțiuni/interogări 
 sistemului și o lista cu cel puțin 8 tipuri de obiecte. 
 - Actiuni:
   - Client
+    - sign in
+    - login
     - vede descriere operă
     - vede spectacole trecute
     - vedet spectacole viitoare
@@ -19,6 +23,8 @@ sistemului și o lista cu cel puțin 8 tipuri de obiecte.
     - sterge elemente din lista de 'Favorite'
     
   - Admin
+    - sign in
+    - login
     - adauga sali de spectacol
     - sterge sali de spectacol
     - adauga spectacol
@@ -46,6 +52,7 @@ sistemului și o lista cu cel puțin 8 tipuri de obiecte.
 - Services:
   - AdminService
   - ClientService
+  - AuditService
 
 
 ### 2) Implementare 
@@ -58,3 +65,15 @@ nu se parcurg colectiile pana la data checkpoint-ului.
 - utilizare moștenire pentru crearea de clase adiționale și utilizarea lor încadrul colecțiilor; 
 - cel puțin o clasă serviciu care sa expună operațiile sistemului 
 - o clasa Main din care sunt făcute apeluri către servicii
+
+
+## Etapa II 
+### 1) Extindeți proiectul din prima etapa prin realizarea persistentei utilizând o baza de date relationala 
+si JDBC. 
+Să se realizeze servicii care sa expună operații de tip create, read, update si delete pentru cel puțin 4 
+dintre clasele definite. Se vor realiza servicii singleton generice pentru scrierea și citirea din baza de 
+date.
+
+### 2) Realizarea unui serviciu de audit 
+Se va realiza un serviciu care sa scrie într-un fișier de tip CSV de fiecare data când este executată una 
+dintre acțiunile descrise în prima etapa. Structura fișierului: nume_actiune, timestamp

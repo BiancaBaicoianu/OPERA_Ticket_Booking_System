@@ -16,7 +16,7 @@ public class BaletRepository {
         try {
             Statement statement = connection.createStatement();
             statement.execute(query);
-            System.out.println("Tabela BALET a fost creata cu succes!");
+            //System.out.println("Tabela BALET a fost creata cu succes!");
         } catch (SQLException e) {
             System.out.println(e);
         }

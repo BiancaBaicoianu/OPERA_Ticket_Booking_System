@@ -12,14 +12,14 @@ public class ClientRepository {
         try {
             Statement statement = connection.createStatement();
             statement.executeUpdate(query);
-            System.out.println("Tabela CLIENT a fost creata cu succes!");
+            //System.out.println("Tabela CLIENT a fost creata cu succes!");
         } catch (SQLException e) {
             System.out.println(e);
         }
     }
     // INSERT
     static public void ADDClient(String username, String password){
-        String query = "INSERT INTO CLIENT VALUES( ?, ?)";
+        String query = "INSERT INTO CLIENT(username,password) VALUES( ?, ?)";
         Connection connection = DatabaseConfiguration.connection();
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(query);
@@ -48,7 +48,7 @@ public class ClientRepository {
         }
     }
     // SELECT
-    static public boolean checkClient(String username, String password) {
+    static public int checkClient(String username, String password) {
         String query = "SELECT * FROM CLIENT WHERE USERNAME = ? AND PASSWORD = ?";
         Connection connection = DatabaseConfiguration.connection();
         try {
@@ -57,15 +57,15 @@ public class ClientRepository {
             preparedStatement.setString(2, password);
             ResultSet resultSet = preparedStatement.executeQuery();
             if (resultSet.next()) {
-                System.out.println("Clientul a fost gasit!");
-                return true;
+                //System.out.println("Clientul a fost gasit!");
+                return 1;
             } else {
-                System.out.println("Clientul nu a fost gasit!");
-                return false;
+                //System.out.println("Clientul nu a fost gasit!");
+                return -1;
             }
         } catch (SQLException e) {
             System.out.println(e);
         }
-        return false;
+        return -1;
     }
 }

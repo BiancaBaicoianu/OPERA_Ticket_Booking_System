@@ -11,21 +11,21 @@ public class AdminRepository {
         try {
             Statement statement = connection.createStatement();
             statement.executeUpdate(query);
-            System.out.println("Tabela ADMIN a fost creata cu succes!");
+            //System.out.println("Tabela ADMIN a fost creata cu succes!");
         } catch (SQLException e) {
             System.out.println(e);
         }
     }
     // INSERT
     static public void AddAdmin(String username, String password){
-        String query = "INSERT INTO ADMIN VALUES( ?, ?)";
+        String query = "INSERT INTO ADMIN(username, password) VALUES( ?, ?)";
         Connection connection = DatabaseConfiguration.connection();
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setString(1, username);
             preparedStatement.setString(2, password);
             preparedStatement.executeUpdate();
-            System.out.println("Adminul a fost adaugat cu succes!");
+            //System.out.println("Adminul a fost adaugat cu succes!");
 
         } catch (SQLException e) {
             System.out.println(e);
@@ -47,13 +47,32 @@ public class AdminRepository {
         }
     }
     // SELECT
-    static public boolean checkAdmin(String username, String password) {
+    static public int checkAdmin(String username, String password) {
         String query = "SELECT * FROM ADMIN WHERE USERNAME = ? AND PASSWORD = ?";
         Connection connection = DatabaseConfiguration.connection();
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setString(1, username);
             preparedStatement.setString(2, password);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            if (resultSet.next()) {
+                //System.out.println("Adminul a fost gasit!");
+                return 1;
+            } else {
+                //System.out.println("Adminul nu a fost gasit!");
+                return -1;
+            }
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
+        return -1;
+    }
+    static public boolean checkUsername(String username) {
+        String query = "SELECT * FROM ADMIN WHERE USERNAME = ?";
+        Connection connection = DatabaseConfiguration.connection();
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setString(1, username);
             ResultSet resultSet = preparedStatement.executeQuery();
             if (resultSet.next()) {
                 System.out.println("Adminul a fost gasit!");

@@ -17,7 +17,7 @@ public class DatabaseConfiguration {
 
             connection = java.sql.DriverManager.getConnection(DB_URL, username, password); // deschiderea unei conexiuni cu bd
             if (connection != null) {
-                System.out.println("Conexiunea cu baza de date a fost realizata cu succes!");
+                //System.out.println("Conexiunea cu baza de date a fost realizata cu succes!");
             } else {
                 System.out.println("Nu s-a putut realiza conexiunea cu baza de date!");
             }

@@ -17,7 +17,7 @@ public class MusicalRepository {
         try {
             Statement statement = connection.createStatement();
             statement.execute(query);
-            System.out.println("Tabela MUSICAL a fost creata cu succes!");
+            //System.out.println("Tabela MUSICAL a fost creata cu succes!");
         } catch (SQLException e) {
             System.out.println(e);
         }

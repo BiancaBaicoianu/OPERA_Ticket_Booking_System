@@ -21,7 +21,7 @@ public class HallRepository {
         try {
             Statement statement = connection.createStatement();
             statement.executeUpdate(query);
-            System.out.println("Tabela HALL a fost creata cu succes!");
+            //System.out.println("Tabela HALL a fost creata cu succes!");
         } catch (SQLException e) {
             System.out.println(e);
         }

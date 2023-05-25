@@ -5,6 +5,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import database.DatabaseConfiguration;
+import models.Ballet;
+import models.Concert;
+import models.Musical;
 import models.Spectacle;
 
 public class SpectacleRepository {
@@ -34,6 +37,7 @@ public class SpectacleRepository {
     static public void insertSpectacle(Spectacle spectacle){
         String query = "INSERT INTO SPECTACLE(ID, EVENT_TYPE, ID_HALL, NAME, DESCRIPTION, AVAILABLE_SEATS, DATE,  STARTING_HOUR, ENDING_HOUR) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         Connection connection = DatabaseConfiguration.connection();
+        String spectacleType = (spectacle instanceof Ballet) ? "balet" : ((spectacle instanceof Musical) ? "musical" : "concert");
 
         try {
             Date date = Date.valueOf(spectacle.getYear()+"-"+spectacle.getMonth()+"-"+spectacle.getDay());
@@ -51,15 +55,15 @@ public class SpectacleRepository {
             preparedStatement.executeUpdate();
             System.out.println("Spectacolul a fost adaugat cu succes!");
 
-//            if (spectacle.getType().equals("balet")){
-//                BalletRepository.insertBallet(spectacle);
-//            }
-//            else if (spectacle.getType().equals("musical")){
-//                MusicalRepository.insertMusical(spectacle);
-//            }
-//            else if (spectacle.getType().equals("concert")){
-//                ConcertRepository.insertConcert(spectacle);
-//            }
+            if (spectacle.getType().equals("balet")){
+                BaletRepository.insertBalet(spectacle.getSpectacleId(),((Ballet)spectacle).isLogeSeat());
+            }
+            else if (spectacle.getType().equals("musical")){
+                MusicalRepository.insertMusical(spectacle.getSpectacleId(),((Musical)spectacle).getNoActs());
+            }
+            else if (spectacle.getType().equals("concert")){
+                ConcertRepository.insertConcert(spectacle.getSpectacleId(),((Concert)spectacle).isWithSeat());
+            }
         } catch (SQLException e) {
             System.out.println(e);
         }
@@ -99,16 +103,16 @@ public class SpectacleRepository {
             ResultSet resultSet = statement.executeQuery(query);
             while (resultSet.next()){
                 Spectacle spectacle;
-//                if (resultSet.getString(2).equals("balet")){
-//                    spectacle = BalletRepository.selectBalletById(resultSet.getInt(1));
-//                }
-//                else if (resultSet.getString(2).equals("musical")){
-//                    spectacle = MusicalRepository.selectMusicalById(resultSet.getInt(1));
-//                }
-//                else {
-//                    spectacle = ConcertRepository.selectConcertById(resultSet.getInt(1));
-//                }
-//                spectacles.add(spectacle);
+                if (resultSet.getString(2).equals("balet")){
+                    spectacle = BaletRepository.findBalet(resultSet.getInt(1));
+                }
+                else if (resultSet.getString(2).equals("musical")){
+                    spectacle = MusicalRepository.findMusical(resultSet.getInt(1));
+                }
+                else {
+                    spectacle = ConcertRepository.findConcert(resultSet.getInt(1));
+                }
+                spectacles.add(spectacle);
             }
         } catch (SQLException e) {
             System.out.println(e);

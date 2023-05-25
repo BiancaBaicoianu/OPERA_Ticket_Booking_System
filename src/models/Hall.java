@@ -22,6 +22,14 @@ public class Hall {
         this.columns = columns;
         this.seatsNo = rows * columns;
     }
+    public Hall( String name, int floor, boolean available, int rows, int columns) {
+        this.name = name;
+        this.floor = floor;
+        this.availability = available;
+        this.rows = rows;
+        this.columns = columns;
+        this.seatsNo = rows * columns;
+    }
 
     public int getId() {
         return id;

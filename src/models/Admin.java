@@ -1,7 +1,9 @@
 package models;
-
+import database.DatabaseManagement;
+import services.AuditService;
 import repos.HallRepository;
 import repos.SpectacleRepository;
+import services.AuditService;
 
 import java.util.List;
 import java.util.Scanner;
@@ -158,8 +160,8 @@ public class Admin {
             System.out.println("Spectacolul nu a putut fi adăugat!");
         }
         else{
-            SpectacleRepository.insertSpectacle(spectacle);
-            //AuditRepository.addToAudit("Spectacolul " + spectacleName + " a fost adăugat de către adminul " + this.username);
+            SpectacleRepository.insertSpectacle(spectacle); // adauga spectacolul in baza de date
+            AuditService.writeAudit("Spectacolul " + spectacleName + " a fost adăugat de către adminul " + this.username);
             System.out.println("Spectacolul a fost adăugat cu succes!");
         }
 
@@ -190,9 +192,9 @@ public class Admin {
         }
         boolean bec = opera.deleteSpectacle(id);
         if(bec){
-            SpectacleRepository.deleteSpectacleById(id);
-            //AuditRepository.addToAudit("Spectacolul cu id-ul " + id + " a fost șters");
-            System.out.println("Nu există un spectacol cu acest id!");
+            SpectacleRepository.deleteSpectacleById(id); // sterge din baza de date
+            AuditService.writeAudit("Spectacolul cu id-ul " + id + " a fost șters");
+            //System.out.println("Nu există un spectacol cu acest id!");
             return;
         }
         opera.deleteSpectacle(id);
@@ -215,8 +217,8 @@ public class Admin {
         Opera opera = Opera.getOpera();
         scanner.nextLine();
 
-        System.out.print("Id sala:");
-        int id = scanner.nextInt();
+//        System.out.print("Id sala:");
+//        int id = scanner.nextInt();
         System.out.print("Nume sala:");
         String name = scanner.next();
         System.out.print("Etaj:");
@@ -237,13 +239,13 @@ public class Admin {
         int columns = scanner.nextInt();
         scanner.nextLine();
 
-        Hall hall = new Hall(id, name, floor, availability, rows, columns);
-//        HallRepository.addHall(hall);
-//        int id = DatabaseManagement.lastIdFromTable("hall");
-//        hall.setId(id);
+        Hall hall = new Hall(name, floor, availability, rows, columns);
+        HallRepository.addHall(hall);
+        int id = DatabaseManagement.lastIdTable("hall");
+        hall.setId(id);
         opera.addHall(hall);
-        //AuditRepository.addToAudit("Admin id: " + admin.getId() + " added hall id: " + id);
-        //System.out.print("Sala a fost adăugată cu succes! ");
+        AuditService.writeAudit("Admin id: " + admin.getId() + " added hall id: " + id);
+        System.out.print("Sala a fost adăugată cu succes! ");
 
     }
     // STERGE SALA
@@ -254,8 +256,8 @@ public class Admin {
         System.out.print("Id sala: ");
         int id = scanner.nextInt();
 
-        //HallRepository.deleteHall(id);
-        //AuditRepository.addToAudit("Admin id: " + admin.getId() + " deleted hall id: " + id);
+        HallRepository.deleteHall(id);
+        AuditService.writeAudit("Admin id: " + admin.getId() + " deleted hall id: " + id);
         opera.deleteHall(id);
     }
 

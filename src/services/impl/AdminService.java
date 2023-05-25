@@ -39,12 +39,12 @@ public class AdminService implements IService {
             if (option == 1){
                 System.out.println("\n----------- Adaugă spectacol -----------");
                 admin.addSpectacle(scanner);
-                System.out.println("Spectacolul a fost adăugat cu succes!");
+                //System.out.println("Spectacolul a fost adăugat cu succes!");
             }
             else if (option == 2) {
                 System.out.println("\n----------- Șterge spectacol -----------");
                 admin.deleteSpectacle(scanner);
-                System.out.println("Spectacolul a fost șters cu succes!");
+                //System.out.println("Spectacolul a fost șters cu succes!");
             }
             else if (option == 3) {
                 System.out.println("\n----------- Verifică dacă sala de spectacol este disponibilă -----------");
@@ -59,12 +59,12 @@ public class AdminService implements IService {
             else if (option == 4) {
                 System.out.println("\n----------- Adaugă sală de spectacol-----------");
                 admin.addHall(scanner);
-                System.out.println("Sala de spectacol a fost adăugată cu succes!");
+                //System.out.println("Sala de spectacol a fost adăugată cu succes!");
             }
             else if (option == 5){
                 System.out.println("\n----------- Șterge sală de spectacol -----------");
                 admin.deleteHall(scanner);
-                System.out.println("Sala de spectacol a fost ștearsă cu succes!");
+                //System.out.println("Sala de spectacol a fost ștearsă cu succes!");
             }
             else if (option == 6){
                 System.out.println("\n----------- Vezi spectacole trecute -----------");

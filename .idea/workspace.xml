@@ -4,23 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23b8627f-bdfd-4e76-a7b5-d3d80432eaa8" name="Changes" comment="Main">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/postgresql_42_6_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/DatabaseConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/DatabaseManagement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/repos/AdminRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/repos/AuditRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/repos/ClientRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/repos/HallRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/repos/SpectacleRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/repos/TicketRepository.java" afterDir="false" />
+    <list default="true" id="23b8627f-bdfd-4e76-a7b5-d3d80432eaa8" name="Changes" comment="BD + CRUD">
+      <change afterPath="$PROJECT_DIR$/audit.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/repos/BaletRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/repos/ConcertRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/repos/MusicalRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/AuditService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OPERA Ticket Booking System.iml" beforeDir="false" afterPath="$PROJECT_DIR$/OPERA Ticket Booking System.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/DatabaseManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/DatabaseManagement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Admin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/Hall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Hall.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Opera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Opera.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Spectacle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Spectacle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repos/AuditRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repos/SpectacleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/repos/SpectacleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/impl/AdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/impl/AdminService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +122,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680982298321</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="BD + CRUD">
+      <created>1684856724218</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1684856724220</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -145,6 +148,7 @@
     <MESSAGE value="Obiecte" />
     <MESSAGE value="Services" />
     <MESSAGE value="Main" />
-    <option name="LAST_COMMIT_MESSAGE" value="Main" />
+    <MESSAGE value="BD + CRUD" />
+    <option name="LAST_COMMIT_MESSAGE" value="BD + CRUD" />
   </component>
 </project>

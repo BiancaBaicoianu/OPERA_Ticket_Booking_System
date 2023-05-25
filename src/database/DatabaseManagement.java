@@ -25,10 +25,12 @@ public class DatabaseManagement {
         //CREATE
         ClientRepository.createTable();
         AdminRepository.createTable();
-        AuditRepository.createTable();
         HallRepository.createTable();
         SpectacleRepository.createTable();
         TicketRepository.createTable();
+        BaletRepository.createTable();
+        MusicalRepository.createTable();
+        ConcertRepository.createTable();
 
     }
 

@@ -31,6 +31,20 @@ public class AdminRepository {
             System.out.println(e);
         }
     }
+    // UPDATE
+    static public void UpdatePassword(String password){
+        String query = "UPDATE ADMIN SET PASSWORD = ?";
+        Connection connection = DatabaseConfiguration.connection();
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setString(1, password);
+            preparedStatement.executeUpdate();
+            System.out.println("Parola a fost schimbata cu succes!");
+
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
+    }
     // DELETE
     static public void DeleteAdmin(String username){
         String query = "DELETE FROM ADMIN WHERE USERNAME = ?";

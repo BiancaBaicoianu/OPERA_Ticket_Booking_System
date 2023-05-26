@@ -49,10 +49,5 @@ public class DatabaseManagement {
         }
         return id;
     }
-//    public void initCustomer(){
-//        Set<Event> favs = FavoritesRepository.selectCustomerFavorites(Customer.getCustomer().getId());
-//        Customer.getCustomer().setFavorites(favs);
-//
-//        TicketRepository.selectCustomerTickets(Customer.getCustomer().getId());
-//    }
+
 }

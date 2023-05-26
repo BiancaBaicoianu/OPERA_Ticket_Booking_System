@@ -28,6 +28,7 @@ public class AdminService implements IService {
         System.out.println("5. Șterge sală de spectacol");
         System.out.println("6. Vezi spectacolele trecute");
         System.out.println("7. Vezi spectacolele viitoare");
+        System.out.println("8. Schimba parola ");
         System.out.print("Alege operațiunea pe care vrei să o realizezi în continuare: ");
     }
 
@@ -74,6 +75,10 @@ public class AdminService implements IService {
                 System.out.println("\n----------- Vezi spectacole viitoare -----------");
                 admin.seeFutureSpectacles();
             }
+            else if (option == 8){
+                System.out.println("\n----------- Schimba parola -----------");
+                admin.changePassword(scanner);
+            }
         }
         else
             System.out.println("Opțiune invalidă!");
@@ -82,6 +87,6 @@ public class AdminService implements IService {
 
     public boolean verifyOption(int option){
 
-        return option <= 7 && option >= 1;
+        return option <= 8 && option >= 1;
     }
 }

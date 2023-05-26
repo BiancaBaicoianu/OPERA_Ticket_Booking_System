@@ -4,6 +4,7 @@ import services.AuditService;
 import repos.HallRepository;
 import repos.SpectacleRepository;
 import services.AuditService;
+import repos.AdminRepository;
 
 import java.util.List;
 import java.util.Scanner;
@@ -18,6 +19,10 @@ public class Admin {
         this.password = password;
     }
     public Admin() {
+    }
+
+    public String getUsername() {
+        return username;
     }
 
     public void setUsername(String username) {
@@ -260,5 +265,26 @@ public class Admin {
         AuditService.writeAudit("Admin id: " + admin.getId() + " deleted hall id: " + id);
         opera.deleteHall(id);
     }
-
+    // SCHIMBA PAROLA
+    public void changePassword(Scanner scanner){
+        scanner.nextLine();
+        System.out.print("Introdu parola veche: ");
+        String oldPassword = scanner.nextLine();
+        if(oldPassword.compareTo(admin.getPassword()) != 0){
+            System.out.println("Parola veche nu este corectă!");
+            return;
+        }
+        System.out.print("Introdu parola nouă: ");
+        String newPassword = scanner.nextLine();
+        System.out.print("Confirmă parola nouă: ");
+        String confirmNewPassword = scanner.nextLine();
+        if(newPassword.compareTo(confirmNewPassword) != 0){
+            System.out.println("Parolele nu coincid!");
+            return;
+        }
+        admin.setPassword(newPassword);
+        AdminRepository.UpdatePassword( newPassword);
+        AuditService.writeAudit("Admin id: " + admin.getId() + " changed password");
+        System.out.println("Parola a fost schimbată cu succes!");
+    }
 }

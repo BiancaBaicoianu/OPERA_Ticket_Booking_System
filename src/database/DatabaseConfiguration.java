@@ -27,11 +27,12 @@ public class DatabaseConfiguration {
         return connection;
     }
 
-//    public static void closeConnection() {
-//        try {
-//            connection.close();
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }
-//    }
+    public static void closeConnection() {
+        try {
+            if(database.DatabaseConfiguration.connection() != null)
+                database.DatabaseConfiguration.connection().close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }

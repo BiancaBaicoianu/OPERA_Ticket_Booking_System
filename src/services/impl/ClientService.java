@@ -36,8 +36,9 @@ public class ClientService implements IService {
         System.out.println("7. Cumpără bilet");
         System.out.println("8. Adăugă la favorite");
         System.out.println("9. Șterge din favorite");
-        System.out.println("10. Sterge cont");
-        System.out.println("11. Logout");
+        System.out.println("10. Schimbă parola");
+        System.out.println("11. Sterge cont");
+        System.out.println("12. Logout");
         System.out.print("Alege operațiunea pe care vrei să o realizezi în continuare: ");
 
 
@@ -115,12 +116,20 @@ public class ClientService implements IService {
                 System.exit(0);
             }
             else if (option == 10){
+                System.out.println("\n----------- Schimbă parola ----------");
+                System.out.print("Parola nouă: ");
+                String newPassword = scanner.next();
+                ClientRepository.UpdatePassword(newPassword);
+                //System.out.println("Parola a fost schimbată cu succes!");
+                System.exit(0);
+            }
+            else if (option == 11){
                 System.out.println("\n----------- Șterge cont ----------");
                 ClientRepository.DeleteClient(Client.getClient().getUsername());
                 System.out.println("Logout cu succes!");
                 Registration.getRegistration().logOut(client.getId(),client.getUsername());
             }
-            else if (option == 11){
+            else if (option == 12){
                 System.out.println("\n----------- Logout ----------");
                 Registration.getRegistration().logOut(client.getId(),client.getUsername());
             }
@@ -152,6 +161,6 @@ public class ClientService implements IService {
 
     public boolean verifyOption(int option){
 
-        return option <= 11 && option >= 0;
+        return option <= 12 && option >= 0;
     }
 }

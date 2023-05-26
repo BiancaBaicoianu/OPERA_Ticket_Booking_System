@@ -3,6 +3,8 @@ package models;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.Set;
+
 public abstract class Spectacle implements Comparable<Spectacle>{
     protected int spectacleId;
     protected Hall hall;

@@ -43,6 +43,24 @@ public class HallRepository {
             System.out.println(e);
         }
     }
+    // UPDATE
+    public static void updateHall(int id, String name, int floor, boolean available, int rows, int columns){
+        String query = "UPDATE HALL SET NAME = ?, FLOOR = ?, AVAILABLE = ?, NO_ROWS = ?, NO_COLUMNS = ? WHERE ID = ?";
+        Connection connection = DatabaseConfiguration.connection();
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setString(1, name);
+            preparedStatement.setInt(2, floor);
+            preparedStatement.setBoolean(3, available);
+            preparedStatement.setInt(4, rows);
+            preparedStatement.setInt(5, columns);
+            preparedStatement.setInt(6, id);
+            preparedStatement.executeUpdate();
+            System.out.println("Sala a fost updatata cu succes!");
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
+    }
     // DELETE
     public static void deleteHall(int id){
         String query = "DELETE FROM HALL WHERE ID = ?";

@@ -32,6 +32,20 @@ public class ClientRepository {
             System.out.println(e);
         }
     }
+    // UPDATE
+    static public void UpdatePassword(String password){
+        String query = "UPDATE CLIENT SET PASSWORD = ?";
+        Connection connection = DatabaseConfiguration.connection();
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setString(1, password);
+            preparedStatement.executeUpdate();
+            System.out.println("Parola a fost schimbata cu succes!");
+
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
+    }
     // DELETE
     static public void DeleteClient(String username){
         String query = "DELETE FROM CLIENT WHERE USERNAME = ?";

@@ -1,7 +1,5 @@
 # OPERA_Ticket_Booking_System
 Proiect PROGRAMARE AVANSATA PE OBIECTE - Anul II, Sem II
-## Descriere aplicație
-
 
 ## Etapa I 
 ### 1) Definirea sistemului:  
